@@ -1,4 +1,4 @@
-﻿using Proj10042023.Model;
+using Proj10042023.Model;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -26,7 +26,9 @@ namespace Proj10042023.Service
         {
             //Implementar
             //SqlCommand commandInsert = new SqlCommand(strInsert, conn);
+            //using (SqlConnection connection = new SqlConnection(connectionString))
 
+            //string strInsertCliente = $"insert into Cliente (Nome, Telefone) values ('{agenda.Nome}', '{agenda.Telefone}')";
             string strInsertCliente = "insert into Cliente (Nome, Telefone) values (@Nome, @Telefone);";
             SqlCommand commandInsertCliente = new SqlCommand(strInsertCliente, conn);
             commandInsertCliente.Parameters.Add(new SqlParameter("@Nome", agenda.Nome));
@@ -42,7 +44,7 @@ namespace Proj10042023.Service
             commandInsertEndereco.Parameters.Add(new SqlParameter("@Rua", agenda.Rua));
             commandInsertEndereco.ExecuteNonQuery();
 
-            string strInsertContaPoupanca = "insert into ContaPoupanca (DescricaoConta, QtdTempoConta, TaxaJuros, Saldo) values (@DescricaoContaPoupanca, @QtdTempoContaPoupanca, @TaxaJuros, @SaldoContaPoupanca);";
+            string strInsertContaPoupanca = "insert into ContaPoupanca (DescricaoContaPoupanca, QtdTempoContaPoupanca, TaxaJuros, Saldo) values (@DescricaoContaPoupanca, @QtdTempoContaPoupanca, @TaxaJuros, @SaldoContaPoupanca);";
             SqlCommand commandInsertContaPoupanca = new SqlCommand(strInsertContaPoupanca, conn);
             commandInsertContaPoupanca.Parameters.Add(new SqlParameter("@DescricaoContaPoupanca", agenda.DescricaoContaPoupanca));
             commandInsertContaPoupanca.Parameters.Add(new SqlParameter("@QtdTempoContaPoupanca", agenda.QtdTempoContaPoupanca));
