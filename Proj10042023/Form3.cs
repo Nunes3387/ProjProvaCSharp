@@ -25,7 +25,7 @@ namespace Proj10042023
             {
                 DescricaoContaCorrente = txtDescricaoContaCorrente.Text,
                 LimiteContaCorrente = Convert.ToInt16(txtLimiteContaCorrente.Text),
-                SaldoContraCorrente = Convert.ToDouble(txtSaldoContraCorrente.Text),
+                SaldoContaCorrente = Convert.ToDouble(txtSaldoContaCorrente.Text),
             };
 
             if (new AgendaController().Inserir(agenda))
