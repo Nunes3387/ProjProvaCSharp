@@ -12,7 +12,7 @@ namespace Proj10042023.Service
     class AgendaService
     {
         //Implementar a conexao
-        string strCon = @"Server=(localdb)\MSSQLLocalDB;Integrated Security=true;AttachDbFileName=D:\bancoAula\dbAgendaTurma.mdf;";
+        string strCon = @"Server=(localdb)\MSSQLLocalDB;Integrated Security=true;AttachDbFileName=D;";
         SqlConnection conn;
 
         public AgendaService()
@@ -95,12 +95,12 @@ namespace Proj10042023.Service
             sb.Append("       QtdTempoContaPoupanca,");
             sb.Append("       TaxaJuros,");
             sb.Append("       SaldoContaPoupanca,");
-            sb.Append("       Descricao da Conta Corrente,");
-            sb.Append("       Limite da Conta Corrente,");
-            sb.Append("       Saldo da Conta Corrente,");
+            sb.Append("       DescricaoContaCorrente,");
+            sb.Append("       LimiteContaCorrente,");
+            sb.Append("       SaldoContaCorrente,");
             sb.Append("       DescricaodoSegmento,");
-            sb.Append("       Descricao da Moeda,");
-            sb.Append("       Descricao do Bonus,");
+            sb.Append("       DescricaoMoeda,");
+            sb.Append("       DescricaoBonus,");
             sb.Append("  FROM Agenda");
 
            
